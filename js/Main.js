@@ -13,5 +13,5 @@ window.onload = function() {
 	// game.state.add("Level", Level);
 
 	// Now start the Boot state.
-	game.state.start("Level");
+	game.state.start("Level2");
 };
