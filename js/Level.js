@@ -25,6 +25,9 @@ var BGMusic, jumpSound, swordSound,bowSound,deathSound;
 var agroRad = 1000;
 var toggleCD = 10;
 var toggleCounter = 10;
+var health = 3;
+var damageCD = 500;
+var damageCounter = 500;
 
 Level.prototype.preload = function() {
 	// TODO: generated method.
@@ -465,12 +468,7 @@ Level.prototype.create = function() {
 	   this.scene.fTheDress.setAll("body.allowGravity", false);
 	   this.scene.fTheDress.setAll("body.velocity.x", scrollSpeed);
 	   
-	   	   
 	   this.scene.fEndScreen.setAll("renderable", false);
-	   
-	   //Commented the next two lines out, since they'll be updated below
-	   //this.scene.fRoman.body.velocity.x = romanSpeed;
-	   //this.scene.fRoman.scale.x = -1;
 	   
 	   this.cursors = this.input.keyboard.createCursorKeys();
 	   
@@ -509,7 +507,6 @@ Level.prototype.romanColl = function(player, roman) {
 		this.scene.fEndScreen.setAll("renderable", true);
 	}
 };
-
 
 Level.prototype.arrowColl = function(arrow, roman) {
 	//when arrow overlaps with roman
@@ -587,13 +584,26 @@ Level.prototype.shootArrow = function()
 		this.game.state.start('Level2');
 	};
 	
+	Level.prototype.damageUrl = function(player, roman)
+	{
+		damageCounter = 0;
+		if (health > 1)
+			{
+			health--;
+			}
+	};
+	
+	Level.prototype.knockback = function()
+	{
+		
+		this.scene.fPlayer.body.velocity.x = -500;
+		this.scene.fPlayer.body.velocity.x = 500;
+		
+	};
+	
 	//TODO: ADD ALL GROUPS IN THIS FUNCTION!!!
 	Level.prototype.scrollUpdate = function(speed) {
 		this.scene.fCollisionLayer.setAll("body.velocity.x", speed);
-		
-		//this.scene.fWBC.setAll("body.velocity.x", 100);
-		//this.scene.fCWBT.setAll("body.velocity.x", -speed);
-		//this.scene.fCWBL.setAll("body.velocity.x", -speed);
 		
 		this.scene.fHazards.setAll("body.velocity.x", speed);
 		this.scene.fH000.setAll("body.velocity.x", speed);
@@ -726,9 +736,10 @@ Level.prototype.update = function() {
    //collide the roman with the platforms
     this.physics.arcade.collide(this.scene.fRomans, this.scene.fCollisionLayer);
   //collide the player with the roman
-  //this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRoman);
-    
-    
+    if (health > 1) {
+	  this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRomans);
+	}
+        
     //enemy chase
     if (this.scene.fPlayer.position.x - this.scene.fRoman.position.x > -agroRad && this.scene.fPlayer.position.x - this.scene.fRoman.position.x < agroRad)
     	{
@@ -822,27 +833,33 @@ Level.prototype.update = function() {
     var touching = this.scene.fPlayer.body.touching.down;
     
  //player movement
+    if (damageCounter == damageCD)
+	{
     if (this.cursors.left.isDown) {
         // move to the left
         this.scene.fPlayer.body.velocity.x = -100;
         
-    } else if (touching && this.cursors.right.isDown) {
+    	} else if (touching && this.cursors.right.isDown) {
         // move to the right
-        this.scene.fPlayer.body.velocity.x = 350;
-    } else if (!touching && this.cursors.right.isDown) {
+    		this.scene.fPlayer.body.velocity.x = 350;
+    	} else if (!touching && this.cursors.right.isDown) {
         // move to the right
-        this.scene.fPlayer.body.velocity.x = 350 + newScroll; //ADDED CONSTANT
-    } else {
+    		this.scene.fPlayer.body.velocity.x = 350 + newScroll; //ADDED CONSTANT
+    	} else {
         // dont move in the horizontal
-        this.scene.fPlayer.body.velocity.x = 0;
-    }
+    		this.scene.fPlayer.body.velocity.x = 0;
+    	}
     if (touching && this.cursors.alt.isDown) {
         // jump if the player is on top of a platform and the alt key is pressed
-        this.scene.fPlayer.body.velocity.y = -800;
-        jumpSound.play();
+        	this.scene.fPlayer.body.velocity.y = -800;
+        	jumpSound.play();
+    	}
+	} 
+    else if (damageCounter < damageCD){
+    	damageCounter++;
+    	this.knockback();
     }
-    
-    
+
   //toggle weapon
     if (toggleCounter < toggleCD)
 	{
@@ -959,29 +976,34 @@ if (this.cursors.shift.isDown && toggleCounter == toggleCD)
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW005, this.spikeColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW006, this.spikeColl, null, this);
     
-  //colission with roman
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman1, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman2, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman3, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman4, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman5, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman6, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman7, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman8, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman9, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman10, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman11, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman12, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman13, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman14, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman15, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman16, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman17, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman18, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman19, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman20, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this)
+    if (health > 1)	{
+    	this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRomans, this.damageUrl, null, this);
+    }
+//colission with roman
+    if (health == 1) {
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman1, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman2, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman3, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman4, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman5, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman6, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman7, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman8, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman9, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman10, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman11, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman12, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman13, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman14, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman15, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman16, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman17, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman18, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman19, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman20, this.romanColl, null, this);
+    	this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this)
+    }
     
     //arrow collision with enemy
     this.physics.arcade.overlap(this.scene.fArrow, this.scene.fRomans, this.arrowColl, null, this);

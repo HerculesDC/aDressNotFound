@@ -976,4 +976,3 @@ Level2.prototype.update = function() {
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fTheDress, this.levelEndColl, null, this);
 	}   
 };
-    
