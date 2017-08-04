@@ -25,6 +25,9 @@ var BGMusic, jumpSound, swordSound,bowSound,deathSound;
 var agroRad = 1000;
 var toggleCD = 10;
 var toggleCounter = 10;
+var health = 3;
+var damageCD = 500;
+var damageCounter = 500;
 
 Level.prototype.preload = function() {
 	// TODO: generated method.
@@ -479,6 +482,8 @@ Level.prototype.create = function() {
 	   bowSound = this.add.audio('bowSound');
 	   deathSound = this.add.audio('deathSound');
 	   jumpSound = this.add.audio('jumpSound');
+	   
+	   
 };
 
 Level.prototype.init = function () {
@@ -585,6 +590,23 @@ Level.prototype.shootArrow = function()
 	Level.prototype.levelEndColl = function()
 	{
 		this.game.state.start('Level2');
+	};
+	
+	Level.prototype.damageUrl = function(player, roman)
+	{
+		damageCounter = 0;
+		if (health > 1)
+			{
+			health--;
+			}
+	};
+	
+	Level.prototype.knockback = function()
+	{
+		
+		this.scene.fPlayer.body.velocity.x = -500;
+		this.scene.fPlayer.body.velocity.x = 500;
+		
 	};
 	
 	//TODO: ADD ALL GROUPS IN THIS FUNCTION!!!
@@ -726,7 +748,11 @@ Level.prototype.update = function() {
    //collide the roman with the platforms
     this.physics.arcade.collide(this.scene.fRomans, this.scene.fCollisionLayer);
   //collide the player with the roman
-  //this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRoman);
+    if (health > 1)
+    	{
+  this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRomans);
+    	}
+    
     
     
     //enemy chase
@@ -822,6 +848,8 @@ Level.prototype.update = function() {
     var touching = this.scene.fPlayer.body.touching.down;
     
  //player movement
+    if (damageCounter == damageCD)
+    	{
     if (this.cursors.left.isDown) {
         // move to the left
         this.scene.fPlayer.body.velocity.x = -100;
@@ -841,7 +869,13 @@ Level.prototype.update = function() {
         this.scene.fPlayer.body.velocity.y = -800;
         jumpSound.play();
     }
-    
+} 
+    else if (damageCounter < damageCD){
+    	damageCounter++;
+    	this.knockback();
+    }
+    	
+    	
     
   //toggle weapon
     if (toggleCounter < toggleCD)
@@ -959,7 +993,13 @@ if (this.cursors.shift.isDown && toggleCounter == toggleCD)
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW005, this.spikeColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW006, this.spikeColl, null, this);
     
+    if (health > 1)
+    	{
+    this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRomans, this.damageUrl, null, this);
+}
   //colission with roman
+    if (health == 1)
+    	{
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman1, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman2, this.romanColl, null, this);
@@ -982,7 +1022,7 @@ if (this.cursors.shift.isDown && toggleCounter == toggleCD)
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman19, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman20, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this)
-    
+    	}
     //arrow collision with enemy
     this.physics.arcade.overlap(this.scene.fArrow, this.scene.fRomans, this.arrowColl, null, this);
     
