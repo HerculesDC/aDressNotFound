@@ -1,0 +1,441 @@
+{
+  "level": [
+    {
+      "type": "spritesheet",
+      "key": "player",
+      "url": "assets/images/urlspritesheet.png",
+      "frameWidth": 100,
+      "frameHeight": 100,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "BG",
+      "url": "assets/images/background.png",
+      "overwrite": false
+    },
+    {
+      "type": "atlas",
+      "key": "objects",
+      "textureURL": "assets/textures/objects.png",
+      "atlasURL": "assets/textures/objects.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "tiles",
+      "textureURL": "assets/textures/tiles.png",
+      "atlasURL": "assets/textures/tiles.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "script",
+      "key": "scene1",
+      "url": "scenes/Scene1.js"
+    },
+    {
+      "type": "spritesheet",
+      "key": "roman",
+      "url": "assets/images/roman.png",
+      "frameWidth": 100,
+      "frameHeight": 100,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "atlas",
+      "key": "spikes",
+      "textureURL": "assets/textures/spikes.png",
+      "atlasURL": "assets/textures/tiles.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "atlas",
+      "key": "grassTile",
+      "textureURL": "assets/textures/grassblock.png",
+      "atlasURL": "assets/textures/tiles.json",
+      "format": "TEXTURE_ATLAS_JSON_HASH"
+    },
+    {
+      "type": "image",
+      "key": "URL",
+      "url": "assets/images/URL.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "urlattacksprite",
+      "url": "assets/images/urlattacksprite.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "urlbgscrolling",
+      "url": "assets/images/urlbgscrolling.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "Ground",
+      "url": "assets/images/new64x64grass.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": 9,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "HazardPlaceholder",
+      "url": "assets/images/HazardPlaceholder.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "spikepng",
+      "url": "assets/images/spikepng.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "tilesprite",
+      "url": "assets/images/tilesprite.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "watersprite1",
+      "url": "assets/images/watersprite1.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "watersprite2",
+      "url": "assets/images/watersprite2.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "spritesheet",
+      "url": "assets/images/tilesprite.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": 3,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "model",
+      "url": "assets/images/model.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "deathsprite",
+      "url": "assets/images/deathsprite.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "firetilespritesheet",
+      "url": "assets/images/firetilespritesheet.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "heartsprite",
+      "url": "assets/images/heartsprite.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "barrel",
+      "url": "assets/images/barrel.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "thedress",
+      "url": "assets/images/thedress.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "barrelupright",
+      "url": "assets/images/barrelupright.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "arrow",
+      "url": "assets/images/arrow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "gameoverscreen",
+      "url": "assets/images/gameoverscreen.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "start",
+      "url": "assets/images/start.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "urlsheetfixed",
+      "url": "assets/images/urlsheetfixed.png",
+      "frameWidth": 100,
+      "frameHeight": 100,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "cavetile",
+      "url": "assets/images/cavetile.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "crate",
+      "url": "assets/images/crate.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "icespikepng",
+      "url": "assets/images/icespikepng.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "icespikereverse",
+      "url": "assets/images/icespikereverse.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "oneblocksprite",
+      "url": "assets/images/oneblocksprite.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "singleblockice",
+      "url": "assets/images/singleblockice.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "singleblocksnow",
+      "url": "assets/images/singleblocksnow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "singleicespike",
+      "url": "assets/images/singleicespike.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "singlesnow",
+      "url": "assets/images/singlesnow.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "testsprite",
+      "url": "assets/images/testsprite.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "overhangsprite",
+      "url": "assets/images/overhangsprite.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "urlsnowsprite",
+      "url": "assets/images/urlsnowsprite.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "urlsnowsprite2",
+      "url": "assets/images/urlsnowsprite2.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "64x64grasstilesheet",
+      "url": "assets/images/64x64grasstilesheet.png",
+      "frameWidth": 0,
+      "frameHeight": 0,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "image",
+      "key": "overhangsinglesprite",
+      "url": "assets/images/overhangsinglesprite.png",
+      "overwrite": false
+    },
+    {
+      "type": "script",
+      "key": "scene2",
+      "url": "scenes/Scene2.js"
+    },
+    {
+      "type": "script",
+      "key": "scene3",
+      "url": "scenes/Scene3.js"
+    },
+    {
+      "type": "image",
+      "key": "singleblockiceoverhang",
+      "url": "assets/images/singleblockiceoverhang.png",
+      "overwrite": false
+    },
+    {
+      "type": "image",
+      "key": "singleblocksnowoverhang",
+      "url": "assets/images/singleblocksnowoverhang.png",
+      "overwrite": false
+    },
+    {
+      "type": "spritesheet",
+      "key": "iceoverhang",
+      "url": "assets/images/iceoverhang.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "snowoverhang",
+      "url": "assets/images/snowoverhang.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "snowwithgrey",
+      "url": "assets/images/snowwithgrey.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "icewithgrey",
+      "url": "assets/images/icewithgrey.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "icewithgreytilesheet",
+      "url": "assets/images/icewithgreytilesheet.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "spritesheet",
+      "key": "snowwithgreytilesheet",
+      "url": "assets/images/snowwithgreytilesheet.png",
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "frameMax": -1,
+      "margin": 0,
+      "spacing": 0
+    },
+    {
+      "type": "audio",
+      "key": "BGMusic",
+      "urls": [
+        "assets/sounds/BGMusic.mp3",
+        "assets/sounds/BGMusic.ogg"
+      ],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "bowEffect",
+      "urls": ["assets/sounds/BowEffect.mp3"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "deathSound",
+      "urls": ["assets/sounds/DeathSound.mp3"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "jumpSound",
+      "urls": ["assets/sounds/Main Jump.wav"],
+      "autoDecode": true
+    },
+    {
+      "type": "audio",
+      "key": "swordSound",
+      "urls": ["assets/sounds/SwordEffect.mp3"],
+      "autoDecode": true
+    }
+  ],
+  "meta": {
+    "generated": "1501794129516",
+    "app": "Phaser Editor",
+    "url": "http://phasereditor.boniatillo.com",
+    "version": "1.0",
+    "copyright": "Arian Fornaris (c) 2015,2016"
+  }
+}
