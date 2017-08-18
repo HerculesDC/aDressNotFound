@@ -1070,7 +1070,7 @@ if (this.cursors.shift.isDown && toggleCounter == toggleCD)
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman18, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman19, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman20, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this)
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this);
     	}
     //arrow collision with enemy
     this.physics.arcade.overlap(this.scene.fArrow, this.scene.fRomans, this.arrowColl, null, this);

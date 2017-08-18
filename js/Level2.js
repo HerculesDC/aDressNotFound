@@ -16,7 +16,7 @@ var responseCounter = 0;
 var romanResponseTime = 50; //used to fix enemy flickering / flipping
 var arrowCounter = 0;
 var arrowResponseTime = 200; //used to reset arrow
-//var romanSpeed = -150; //modified to 150
+//var romanSpeed2 = -150; //modified to 150
 var holdSword = true;
 var shooting = false;
 var gameStarted = true;
@@ -25,6 +25,28 @@ var agroRad = 1000;
 var toggleCD = 10;
 var toggleCounter = 10;
 
+
+//var proto = Object.create(Phaser.State.prototype);
+//var flippedRight, flippedLeft = false; //used to fix player flipping
+//var responseCounter = 0;
+//var romanResponseTime = 50; //used to fix enemy flickering / flipping
+//var arrowCounter = 0;
+//var arrowResponseTime = 200; //used to reset arrow
+//var scrollSpeed = 0;
+const newScroll2 = -300;
+const romanSpeed2 = -150; //modified to 150
+//Level.prototype = proto;
+//Level.prototype.constructor = Level;
+//var holdSword = true;
+//var shooting = false;
+//var gameStarted = false;
+//var BGMusic, jumpSound, swordSound,bowSound,deathSound;
+//var agroRad = 1000;
+//var toggleCD = 10;
+//var toggleCounter = 10;
+var health = 3;
+var damageCD = 500;
+var damageCounter = 500;
 
 Level2.prototype.preload = function() {
 	// TODO: generated method.
@@ -471,7 +493,7 @@ Level2.prototype.create = function() {
 	   
 	   this.scene.fCeilBase.setAll("body.immovable", true);
 	   this.scene.fCeilBase.setAll("body.allowGravity", false);
-	   this.scene.fCeilBase.setAll("body.velocity.x", newScroll);
+	   this.scene.fCeilBase.setAll("body.velocity.x", newScroll2);
 	   
 	   this.scene.fCL000.setAll("body.immovable", true);
 	   this.scene.fCL000.setAll("body.allowGravity", false);
@@ -483,7 +505,7 @@ Level2.prototype.create = function() {
 
 	   this.scene.fCeil.setAll("body.immovable", true);
 	   this.scene.fCeil.setAll("body.allowGravity", false);
-	   this.scene.fCeil.setAll("body.velocity.x", newScroll);
+	   this.scene.fCeil.setAll("body.velocity.x", newScroll2);
 	   
 	   this.scene.fTheDress.setAll("body.immovable", true);
 	   this.scene.fTheDress.setAll("body.allowGravity", false);
@@ -495,8 +517,14 @@ Level2.prototype.create = function() {
 	  
 	   this.cursors = this.input.keyboard.createCursorKeys();
 	   
+	   
 	   BGMusic = this.add.audio('BGMusic');
-	   BGMusic.play();
+	   swordSound = this.add.audio('swordSound');
+	   bowSound = this.add.audio('bowSound');
+	   deathSound = this.add.audio('deathSound');
+	   jumpSound = this.add.audio('jumpSound');
+	   
+	   
 };
 
 Level2.prototype.init = function () {
@@ -513,6 +541,7 @@ Level2.prototype.init = function () {
 Level2.prototype.spikeColl = function(player, hazard) {
     // when the player overlaps with a hazard
     player.kill();
+    deathSound.play();
     this.scene.fEndScreen.setAll("renderable", true);
 };
 
@@ -521,10 +550,17 @@ Level2.prototype.romanColl = function(player, roman) {
 	if (this.cursors.ctrl.isDown){
 		roman.kill();
 	}
-	else {
-		player.kill();
-		this.scene.fEndScreen.setAll("renderable", true);
+	else if (health > 0)
+	{
+		health--;
+		this.knockback();
 	}
+	else if (health == 0)
+		{
+		player.kill();
+		deathSound.play();
+		this.scene.fEndScreen.setAll("renderable", true);
+		}
 };
 
 
@@ -555,18 +591,19 @@ Level2.prototype.arrowCollGround = function(arrow, plat) {
 	shooting = false;
 };
 
-Level2.prototype.shootArrow = function() {
+Level2.prototype.shootArrow = function()
+{
 		shooting = true;
 		this.scene.fArrow.body.position.x = this.scene.fPlayer.body.position.x;
 		this.scene.fArrow.body.position.y = this.scene.fPlayer.body.position.y;
 		this.scene.fArrows.setAll("renderable", true);
-	    this.scene.fArrows.setAll("body.immovable", false);
-	    this.scene.fArrows.setAll("body.allowGravity", true);
+	   this.scene.fArrows.setAll("body.immovable", false);
+	   this.scene.fArrows.setAll("body.allowGravity", true);
 	   //shoot in the right direction
 	   if (this.scene.fPlayer.scale.x == 1)
 		   {
 		   this.scene.fArrow.scale.x == 1;
-		   this.scene.fArrow.body.velocity.x = 700;
+	   this.scene.fArrow.body.velocity.x = 700;
 		   }
 	   else
 		   {
@@ -574,9 +611,10 @@ Level2.prototype.shootArrow = function() {
 		   this.scene.fArrow.body.velocity.x = -700;
 		   }
 	  this.scene.fArrow.body.velocity.y = -500;	
-};
+	};
 	
-Level2.prototype.romanChase = function(player, roman) {
+	Level2.prototype.romanChase = function(player, roman)
+	{
 		if (gameStarted)
 		{
 	    	if (responseCounter == romanResponseTime)
@@ -597,12 +635,29 @@ Level2.prototype.romanChase = function(player, roman) {
 		}
 	};
 	
-Level2.prototype.levelEndColl = function() {
-		this.game.state.start('Level3');
+	Level2.prototype.levelEndColl = function()
+	{
+		this.game.state.start('Level2');
+	};
+	
+	Level2.prototype.damageUrl = function(player, roman)
+	{
+		damageCounter = 0;
+		if (health > 1)
+			{
+			health--;
+			}
+	};
+	
+	Level2.prototype.knockback = function()
+	{
+		
+		damageCounter=0;
+		
 	};
 	
 	//TODO: ADD ALL GROUPS IN THIS FUNCTION!!!
-Level2.prototype.scrollUpdate = function(speed) {
+	Level2.prototype.scrollUpdate = function(speed) {
 		this.scene.fCollisionLayer.setAll("body.velocity.x", speed);
 		
 		//this.scene.fWBC.setAll("body.velocity.x", 100);
@@ -710,6 +765,7 @@ Level2.prototype.scrollUpdate = function(speed) {
 		this.scene.fST004.setAll("body.velocity.x", speed);
 		
 		this.scene.fWater.setAll("body.velocity.x", speed);
+		this.scene.fW000.setAll("body.velocity.x", speed);
 		this.scene.fW001.setAll("body.velocity.x", speed);
 		this.scene.fW002.setAll("body.velocity.x", speed);
 		this.scene.fW003.setAll("body.velocity.x", speed);
@@ -718,25 +774,75 @@ Level2.prototype.scrollUpdate = function(speed) {
 		this.scene.fW006.setAll("body.velocity.x", speed);
 		
 		this.scene.fGroundBase.setAll("body.velocity.x", speed);
+		this.scene.fCeilBase.setAll("body.velocity.x", speed);
 		
-		this.scene.fCaveWalls.setAll("body.velocity.x", speed);
+		this.scene.fTheDress.setAll("body.velocity.x", speed);
 		
-		this.scene.fTheDress.setAll("body.velocity.x", speed);		
-};
+		this.scene.fCeil.setAll("body.velocity.x", speed);
+		this.scene.fCL000.setAll("body.velocity.x", speed);
+		this.scene.fCL001.setAll("body.velocity.x", speed);
+		
+		this.scene.fThreeHearts.setAll("renderable", false);
+		this.scene.fHeart2.setAll("renderable", false);
+		this.scene.fHeart3.setAll("renderable", false);
+		this.scene.fHeart4.setAll("renderable", false);
+		
+	};
 
 Level2.prototype.update = function() {
 	// TODO: generated method.
 	
+	//start screen
+	if (this.cursors.enter.isDown)
+		{
+		this.scene.fStartScreen.setAll("renderable", false);
+		this.scrollUpdate(newScroll); // ADDED CONSTANT
+		gameStarted = true;
+		BGMusic.play();
+		this.scene.fThreeHearts.setAll("renderable", true);
+		}
 	
-		
-		
+	//health bar code
+	
+	if (health == 3)
+		{
+		this.scene.fThreeHearts.setAll("renderable", true);
+		this.scene.fHeart2.setAll("renderable", false);
+		this.scene.fHeart3.setAll("renderable", false);
+		this.scene.fHeart4.setAll("renderable", false);
+		}
+	else if (health == 2)
+		{
+		this.scene.fThreeHearts.setAll("renderable", false);
+		this.scene.fHeart2.setAll("renderable", true);
+		this.scene.fHeart3.setAll("renderable", false);
+		this.scene.fHeart4.setAll("renderable", false);
+		}
+	else if (health == 1)
+		{
+		this.scene.fThreeHearts.setAll("renderable", false);
+		this.scene.fHeart2.setAll("renderable", false);
+		this.scene.fHeart3.setAll("renderable", true);
+		this.scene.fHeart4.setAll("renderable", false);
+		}
+	else
+		{
+		this.scene.fThreeHearts.setAll("renderable", false);
+		this.scene.fHeart2.setAll("renderable", false);
+		this.scene.fHeart3.setAll("renderable", false);
+		this.scene.fHeart4.setAll("renderable", true);
+		}
 	
 	// collide the player with the platforms
     this.physics.arcade.collide(this.scene.fPlayer, this.scene.fCollisionLayer);
    //collide the roman with the platforms
     this.physics.arcade.collide(this.scene.fRomans, this.scene.fCollisionLayer);
   //collide the player with the roman
-  //this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRoman);
+   // if (health > 1)
+    	//{
+ // this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRomans);
+    	//}
+    
     
     
     //enemy chase
@@ -755,9 +861,8 @@ Level2.prototype.update = function() {
     if (this.scene.fPlayer.position.x - this.scene.fRoman3.position.x > -agroRad && this.scene.fPlayer.position.x - this.scene.fRoman3.position.x < agroRad)
 	{
     this.romanChase(this.scene.fPlayer, this.scene.fRoman3);
-    /*
 	}
-    if (this.scene.fPlayer.position.x - this.scene.fRoman4.position.x > -agroRad && this.scene.fPlayer.position.x - this.scene.fRoman4.position.x < agroRad)
+    /*if (this.scene.fPlayer.position.x - this.scene.fRoman4.position.x > -agroRad && this.scene.fPlayer.position.x - this.scene.fRoman4.position.x < agroRad)
 	{
     this.romanChase(this.scene.fPlayer, this.scene.fRoman4);
 	}
@@ -828,38 +933,50 @@ Level2.prototype.update = function() {
     if (this.scene.fPlayer.position.x - this.scene.fRoman21.position.x > -agroRad && this.scene.fPlayer.position.x - this.scene.fRoman21.position.x < agroRad)
 	{
     this.romanChase(this.scene.fPlayer, this.scene.fRoman21);
-	}
-	*/
+	}*/
     // a flag to know if the player is (down) touching the platforms
     var touching = this.scene.fPlayer.body.touching.down;
     
  //player movement
-    if (this.cursors.left.isDown) {
+    if (damageCounter == damageCD)
+    	{
+    	if (this.cursors.left.isDown) {
         // move to the left
         this.scene.fPlayer.body.velocity.x = -100;
-        
-    } else if (touching && this.cursors.right.isDown) {
+        } 
+    	else if (touching && this.cursors.right.isDown) {
         // move to the right
         this.scene.fPlayer.body.velocity.x = 350;
-    } else if (!touching && this.cursors.right.isDown) {
+        } 
+    	else if (!touching && this.cursors.right.isDown) {
         // move to the right
         this.scene.fPlayer.body.velocity.x = 350 + newScroll; //ADDED CONSTANT
-    } else {
+    	} 
+    	else {
         // dont move in the horizontal
         this.scene.fPlayer.body.velocity.x = 0;
-    }
+    	}
     if (touching && this.cursors.alt.isDown) {
         // jump if the player is on top of a platform and the alt key is pressed
         this.scene.fPlayer.body.velocity.y = -800;
+        jumpSound.play();
     }
-    
+} 
+    else if (damageCounter < damageCD){
+    	damageCounter++;
+    	
+    }
+    	
+    	if (this.cursors.L.isDown){
+    		this.game.state.start('Level2');
+    	}
     
   //toggle weapon
     if (toggleCounter < toggleCD)
 	{
 	toggleCounter++;
 	}
-    if (this.cursors.shift.isDown && toggleCounter == toggleCD)
+if (this.cursors.shift.isDown && toggleCounter == toggleCD)
 	{
 	toggleCounter = 0;
 		if (holdSword)
@@ -874,6 +991,7 @@ Level2.prototype.update = function() {
     //player attack
     if (this.cursors.ctrl.isDown && holdSword == true){
     	this.scene.fPlayer.play("swordAttack");
+    	swordSound.play();
     }
     	else if (this.cursors.ctrl.isDown && holdSword == false)
     		{
@@ -881,6 +999,7 @@ Level2.prototype.update = function() {
     		{
     			this.shootArrow();
     			this.scene.fPlayer.play("bowAttack");
+    			bowSound.play();
     		}
     	}
     
@@ -961,8 +1080,21 @@ Level2.prototype.update = function() {
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fH00F, this.spikeColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fH010, this.spikeColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fFIREWALL, this.spikeColl, null, this);
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW001, this.spikeColl, null, this);
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW002, this.spikeColl, null, this);
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW003, this.spikeColl, null, this);
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW004, this.spikeColl, null, this);
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW005, this.spikeColl, null, this);
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fW006, this.spikeColl, null, this);
+    
+    if (health > 1)
+    	{
+   this.physics.arcade.collide(this.scene.fPlayer, this.scene.fRomans, this.damageUrl, null, this);
+}
     
   //colission with roman
+    if (health == 1)
+    	{
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman1, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman2, this.romanColl, null, this);
@@ -985,9 +1117,9 @@ Level2.prototype.update = function() {
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman18, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman19, this.romanColl, null, this);
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman20, this.romanColl, null, this);
-    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this)
+    this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fRoman21, this.romanColl, null, this);
     */
-    
+    	}
     //arrow collision with enemy
     this.physics.arcade.overlap(this.scene.fArrow, this.scene.fRomans, this.arrowColl, null, this);
     
@@ -998,6 +1130,7 @@ Level2.prototype.update = function() {
     this.physics.arcade.overlap(this.scene.fArrow, this.scene.WorldBounds, this.arrowCollWorld, null, this);
     
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fTheDress, this.levelEndColl, null, this);
-	}   
+    
 };
+    
     

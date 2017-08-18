@@ -1815,9 +1815,31 @@ function Scene2(aGame, aParent) {
 
 	var endScreen = this.game.add.group(prefabRoot_Scene1);
 
+	var end = this.game.add.sprite(0, 0, 'gameoverscreen', null, endScreen);
+	end.scale.setTo(1.25, 1.11);
+
 	var startScreen = this.game.add.group(prefabRoot_Scene1);
 
+	var start = this.game.add.sprite(0, 0, 'start', null, startScreen);
+	start.scale.setTo(1.2372811402549535, 1.098495271817374);
+
 	var theDress = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	var threeHearts = this.game.add.group(prefabRoot_Scene1);
+
+	this.game.add.sprite(0, 0, 'heart1', null, threeHearts);
+
+	var Heart2 = this.game.add.group(prefabRoot_Scene1);
+
+	this.game.add.sprite(0, 0, 'heart2', null, Heart2);
+
+	var Heart3 = this.game.add.group(prefabRoot_Scene1);
+
+	this.game.add.sprite(0, 0, 'heart3', null, Heart3);
+
+	var Heart4 = this.game.add.group(prefabRoot_Scene1);
+
+	this.game.add.sprite(0, 0, 'heart4', null, Heart4);
 
 	var MasterGroup = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
 
@@ -2111,6 +2133,10 @@ function Scene2(aGame, aParent) {
 	this.fEndScreen = endScreen;
 	this.fStartScreen = startScreen;
 	this.fTheDress = theDress;
+	this.fThreeHearts = threeHearts;
+	this.fHeart2 = Heart2;
+	this.fHeart3 = Heart3;
+	this.fHeart4 = Heart4;
 	this.fMasterGroup = MasterGroup;
 
 	/* --- post-init-begin --- */
