@@ -154,16 +154,6 @@
             "spacing": 0
         },
         {
-            "type": "spritesheet",
-            "key": "heartsprite",
-            "url": "assets/images/heartsprite.png",
-            "frameWidth": 0,
-            "frameHeight": 0,
-            "frameMax": -1,
-            "margin": 0,
-            "spacing": 0
-        },
-        {
             "type": "image",
             "key": "barrel",
             "url": "assets/images/barrel.png",
@@ -432,8 +422,38 @@
         },
         {
             "type": "image",
-            "key": "icespikepngdown",
-            "url": "assets/images/icespikepngdown.png",
+            "key": "heart1",
+            "url": "assets/images/heart1.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "heart2",
+            "url": "assets/images/heart2.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "heart3",
+            "url": "assets/images/heart3.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "heart4",
+            "url": "assets/images/heart4.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "heartsprite",
+            "url": "assets/images/heartsprite.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "heartsprite2",
+            "url": "assets/images/heartsprite2.png",
             "overwrite": false
         },
         {
@@ -450,25 +470,47 @@
         },
         {
             "type": "image",
-            "key": "singleblockicegrey",
-            "url": "assets/images/singleblockicegrey.png",
+            "key": "icespikepngdown",
+            "url": "assets/images/icespikepngdown.png",
+            "overwrite": false
+        },
+        {
+            "type": "spritesheet",
+            "key": "russian",
+            "url": "assets/images/russianenemyspritesheet.png",
+            "frameWidth": 100,
+            "frameHeight": 100,
+            "frameMax": -1,
+            "margin": 0,
+            "spacing": 0
+        },
+        {
+            "type": "image",
+            "key": "attack",
+            "url": "assets/images/attack.png",
             "overwrite": false
         },
         {
             "type": "image",
-            "key": "singleblocksnowgrey",
-            "url": "assets/images/singleblocksnowgrey.png",
+            "key": "jump",
+            "url": "assets/images/jump.png",
             "overwrite": false
         },
         {
             "type": "image",
-            "key": "slateground",
-            "url": "assets/images/slateground.png",
+            "key": "movement",
+            "url": "assets/images/movement.png",
+            "overwrite": false
+        },
+        {
+            "type": "image",
+            "key": "swapweap",
+            "url": "assets/images/swapweap.png",
             "overwrite": false
         }
     ],
     "meta": {
-        "generated": "1501814126839",
+        "generated": "1503029716966",
         "app": "Phaser Editor",
         "url": "http://phasereditor.boniatillo.com",
         "version": "1.0",

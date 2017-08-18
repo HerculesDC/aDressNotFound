@@ -1,36 +1,11 @@
 {
-  "canvas-version": 2,
   "settings": {
-    "className": "Scene1",
     "sceneWidth": 1200,
     "sceneHeight": 800,
     "generateOnSave": true,
     "enableStepping": true,
     "stepWidth": 64,
-    "stepHeight": 64,
-    "lang": "JAVA_SCRIPT",
-    "baseClass": "Phaser.Group",
-    "backgroundColor": [
-      180,
-      180,
-      180
-    ],
-    "gridColor": [
-      200,
-      200,
-      200
-    ],
-    "showGrid": true
-  },
-  "stateSettings": {
-    "stageBackgroundColor": [
-      0,
-      0,
-      0
-    ],
-    "preloadSpriteId": "",
-    "preloadSprite_direction": 0,
-    "load.pack": []
+    "stepHeight": 64
   },
   "world": {
     "type": "group",
@@ -2678,27 +2653,6 @@
                               "children": [
                                 {
                                   "type": "spritesheet",
-                                  "id": "bb5f3bd5-5496-4d34-897a-a7bad1c43ab5",
-                                  "asset": "3",
-                                  "info": {
-                                    "editorName": "firetilespritesheet1311",
-                                    "x": 13248,
-                                    "y": 128,
-                                    "animations": [{
-                                      "name": "Flame",
-                                      "frameRate": 30,
-                                      "loop": true,
-                                      "frames": [
-                                        "0",
-                                        "1",
-                                        "2",
-                                        "3"
-                                      ]
-                                    }]
-                                  }
-                                },
-                                {
-                                  "type": "spritesheet",
                                   "id": "24557100-0871-4f9b-98aa-36410a2ebb51",
                                   "asset": "3",
                                   "info": {
@@ -2746,27 +2700,6 @@
                                   "info": {
                                     "editorName": "firetilespritesheet1314",
                                     "x": 13440,
-                                    "y": 128,
-                                    "animations": [{
-                                      "name": "Flame",
-                                      "frameRate": 30,
-                                      "loop": true,
-                                      "frames": [
-                                        "0",
-                                        "1",
-                                        "2",
-                                        "3"
-                                      ]
-                                    }]
-                                  }
-                                },
-                                {
-                                  "type": "spritesheet",
-                                  "id": "8aa21b99-11b3-4ed0-b7f7-45978590655d",
-                                  "asset": "3",
-                                  "info": {
-                                    "editorName": "firetilespritesheet1315",
-                                    "x": 13504,
                                     "y": 128,
                                     "animations": [{
                                       "name": "Flame",
@@ -28482,6 +28415,62 @@
                     },
                     {
                       "type": "group",
+                      "id": "2375d101-fc70-4fd4-a527-28765dc72605",
+                      "info": {
+                        "editorName": "threeHearts",
+                        "editorPublic": true,
+                        "children": [{
+                          "type": "image",
+                          "id": "4bd549cc-753d-4d8e-bd84-62ff02d02f03",
+                          "asset": "22",
+                          "info": {"editorName": "heart1"}
+                        }]
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "4409e3a5-9e50-4c6e-8af6-19cbce41370d",
+                      "info": {
+                        "editorName": "Heart2",
+                        "editorPublic": true,
+                        "children": [{
+                          "type": "image",
+                          "id": "3c903e60-3e74-401b-8d74-52fa6561148c",
+                          "asset": "23",
+                          "info": {"editorName": "heart2"}
+                        }]
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "0a200298-4340-41cd-985e-59427b6b376d",
+                      "info": {
+                        "editorName": "Heart3",
+                        "editorPublic": true,
+                        "children": [{
+                          "type": "image",
+                          "id": "7a97e4b7-afb2-4bb0-a4da-8b28a74cb899",
+                          "asset": "24",
+                          "info": {"editorName": "heart3"}
+                        }]
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "48c75c72-691a-42a9-9831-2abf6f21f083",
+                      "info": {
+                        "editorName": "Heart4",
+                        "editorPublic": true,
+                        "children": [{
+                          "type": "image",
+                          "id": "a07ceef3-b161-4655-8192-2ca9aa7dc33c",
+                          "asset": "25",
+                          "info": {"editorName": "heart4"}
+                        }]
+                      }
+                    },
+                    {
+                      "type": "group",
                       "id": "59ec7cb6-e90b-4a46-a8c6-9863833a0537",
                       "info": {
                         "editorName": "theDress",
@@ -28490,7 +28479,7 @@
                         "children": [{
                           "type": "tileSprite",
                           "id": "6b4d99d4-c6f0-477d-ba46-f2cb251d0557",
-                          "asset": "22",
+                          "asset": "26",
                           "info": {
                             "editorName": "thedress",
                             "editorPublic": true,
@@ -28511,7 +28500,6 @@
       }]
     }
   },
-  "type": "GROUP",
   "asset-table": {
     "0": {
       "file": "WebContent/assets/assets-pack.json",
@@ -28638,8 +28626,27 @@
     "22": {
       "file": "WebContent/assets/assets-pack.json",
       "section": "level",
+      "asset": "heart1"
+    },
+    "23": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "heart2"
+    },
+    "24": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "heart3"
+    },
+    "25": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
+      "asset": "heart4"
+    },
+    "26": {
+      "file": "WebContent/assets/assets-pack.json",
+      "section": "level",
       "asset": "thedress"
     }
-  },
-  "prefab-table": {}
+  }
 }

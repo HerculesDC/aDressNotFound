@@ -20,29 +20,11 @@ function Scene2(aGame, aParent) {
 
 	var CollisionLayer = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
 
-	var CST000C = this.game.add.sprite(4928, 768, 'tiles', 'physics', CollisionLayer);
-	CST000C.scale.setTo(2.56, 2.56);
-
-	var CST000B = this.game.add.sprite(4864, 704, 'tiles', 'physics', CollisionLayer);
-	CST000B.scale.setTo(2.56, 5.12);
-
-	var CST000A = this.game.add.sprite(4800, 640, 'tiles', 'physics', CollisionLayer);
-	CST000A.scale.setTo(2.56, 7.68);
-
-	var CST000 = this.game.add.sprite(4608, 576, 'tiles', 'physics', CollisionLayer);
-	CST000.scale.setTo(7.68, 10.24);
-
 	var CPL000A = this.game.add.sprite(1280, 192, 'tiles', 'physics', CollisionLayer);
 	CPL000A.scale.setTo(2.56, 25.6);
 
 	var CPL000 = this.game.add.sprite(0, 128, 'tiles', 'physics', CollisionLayer);
 	CPL000.scale.setTo(58.88, 2.56);
-
-	var CGR004 = this.game.add.sprite(5056, 704, 'tiles', 'physics', CollisionLayer);
-	CGR004.scale.setTo(43.52, 5.12);
-
-	var CGR003 = this.game.add.sprite(4416, 704, 'tiles', 'physics', CollisionLayer);
-	CGR003.scale.setTo(7.68, 5.12);
 
 	var CGR002B = this.game.add.sprite(4096, 640, 'tiles', 'physics', CollisionLayer);
 	CGR002B.scale.setTo(12.8, 7.68);
@@ -59,6 +41,887 @@ function Scene2(aGame, aParent) {
 
 	var CGR000 = this.game.add.sprite(1344, 768, 'tiles', 'physics', CollisionLayer);
 	CGR000.scale.setTo(51.2, 2.56);
+
+	var CGR003 = this.game.add.sprite(4416, 704, 'tiles', 'physics', CollisionLayer);
+	CGR003.scale.setTo(7.68, 5.12);
+
+	var CGR004 = this.game.add.sprite(4608, 576, 'tiles', 'physics', CollisionLayer);
+	CGR004.scale.setTo(53.76, 10.24);
+
+	var COB000 = this.game.add.sprite(3072, 704, 'tiles', 'physics', CollisionLayer);
+	COB000.scale.setTo(2.56, 2.56);
+
+	var COB000A = this.game.add.sprite(3136, 640, 'tiles', 'physics', CollisionLayer);
+	COB000A.scale.setTo(2.56, 5.12);
+
+	var COB001 = this.game.add.sprite(4864, 512, 'tiles', 'physics', CollisionLayer);
+	COB001.scale.setTo(5.12, 2.56);
+
+	var COB001A = this.game.add.sprite(5248, 512, 'tiles', 'physics', CollisionLayer);
+	COB001A.scale.setTo(2.56, 2.56);
+
+	var CST000 = this.game.add.sprite(5952, 640, 'tiles', 'physics', CollisionLayer);
+	CST000.scale.setTo(2.56, 7.68);
+
+	var CST000A = this.game.add.sprite(6016, 704, 'tiles', 'physics', CollisionLayer);
+	CST000A.scale.setTo(2.56, 5.12);
+
+	var CGR005 = this.game.add.sprite(6080, 768, 'tiles', 'physics', CollisionLayer);
+	CGR005.scale.setTo(53.76, 2.56);
+
+	var CCL000 = this.game.add.sprite(6080, -64, 'tiles', 'physics', CollisionLayer);
+	CCL000.scale.setTo(53.76, 15.36);
+
+	var CCL000A = this.game.add.sprite(6016, -64, 'tiles', 'physics', CollisionLayer);
+	CCL000A.scale.setTo(2.56, 12.8);
+
+	var CaveWalls = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	this.game.add.tileSprite(6080, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6144, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6208, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6272, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6336, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6400, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6464, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6528, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(5888, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(5952, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(5952, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(5952, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(5952, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 256, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6080, 256, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6016, 192, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6592, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6656, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6720, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6784, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6848, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6912, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(6976, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7040, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7104, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7168, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7232, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7296, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7360, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7424, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7488, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 704, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 640, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 576, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 512, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 448, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 384, 64, 64, 'cavetile', null, CaveWalls);
+
+	this.game.add.tileSprite(7552, 320, 64, 64, 'cavetile', null, CaveWalls);
+
+	var GroundBase = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	var Ground4 = this.game.add.tileSprite(2048, -128, 64, 64, 'Ground', 4, GroundBase);
+	Ground4.body.immovable = true;
+	Ground4.body.allowRotation = false;
+	Ground4.body.allowGravity = false;
+
+	this.game.add.tileSprite(3456, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3520, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3584, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3648, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3712, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3776, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3776, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3840, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3520, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3584, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3648, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3712, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3776, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3776, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3840, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3904, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3904, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3968, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3968, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4032, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4096, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4032, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4096, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4160, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4160, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4224, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4224, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4288, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4352, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4288, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4608, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4480, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4352, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4416, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4544, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(3456, 704, 64, 64, 'snowwithgreytilesheet', 3, GroundBase);
+
+	this.game.add.tileSprite(4608, 640, 64, 64, 'snowwithgreytilesheet', 3, GroundBase);
+
+	this.game.add.tileSprite(4608, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4672, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4736, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4800, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4864, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4928, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4928, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5056, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5120, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5184, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5248, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5312, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5376, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5440, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5632, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5504, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5568, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5696, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4672, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4736, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4800, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4864, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4928, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5056, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5120, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5184, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5248, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5312, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5376, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5440, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5504, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5696, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5568, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5632, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5760, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4672, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4736, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4800, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4864, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4928, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5056, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5120, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5184, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5248, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5312, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5376, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5440, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5504, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5696, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5568, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5632, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5760, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4864, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4928, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(4992, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5056, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5120, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5184, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5248, 576, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5760, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5824, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5888, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5824, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5888, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5824, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5888, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5952, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(5952, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	this.game.add.tileSprite(6016, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
+
+	var CeilBase = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	this.game.add.tileSprite(6080, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6080, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6144, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6080, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6144, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6144, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6208, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6272, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6208, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6272, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6208, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6272, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6080, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6336, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6400, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6080, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6144, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6144, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6464, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6528, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6208, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6272, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6208, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6272, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6336, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6400, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6336, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6400, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6464, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6528, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6464, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6528, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6336, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6336, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6400, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6400, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6464, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6528, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6464, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6528, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6592, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6592, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6656, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6592, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6656, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6656, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6720, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6784, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6720, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6784, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6720, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6784, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6592, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6848, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6912, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6592, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6656, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6656, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6976, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7040, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6720, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6784, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6720, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6784, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6848, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6912, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6848, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6912, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6976, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7040, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6976, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7040, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6848, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6848, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6912, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6912, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6976, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7040, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(6976, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7040, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7104, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7104, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7104, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7168, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7232, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7296, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7360, 192, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7104, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7104, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7168, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7232, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7168, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7232, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7296, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7360, 128, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7296, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7360, 64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7168, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7168, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7232, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7232, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7296, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7360, 0, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7296, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	this.game.add.tileSprite(7360, -64, 64, 64, 'snowwithgreytilesheet', 4, CeilBase);
+
+	var Arrows = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	var arrow = this.game.add.sprite(0, 896, 'arrow', null, Arrows);
+
+	var player = this.game.add.sprite(0, 0, 'urlsheetfixed', 0, prefabRoot_Scene1);
+	player.animations.add('swordWalk', [1, 2, 3, 2], 30, false);
+	player.animations.add('swordIdle', [0], 60, false);
+	player.animations.add('bowIdle', [6], 60, false);
+	player.animations.add('bowWalk', [7, 8, 9, 10], 30, false);
+	player.animations.add('swordAttack', [4, 5, 4], 30, false);
+	this.game.physics.arcade.enable(player);
+	player.body.setSize(45.0, 100.0, 17.0, 0.0);
+
+	var Romans = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	var roman = this.game.add.sprite(704, 0, 'roman', 0, Romans);
+	roman.animations.add('walk', [1, 2, 3, 2], 4, true);
+	roman.animations.add('idle', [0], 4, false);
+	roman.body.setSize(45.0, 100.0, 17.0, 0.0);
+
+	var roman1 = this.game.add.sprite(1216, 0, 'roman', 0, Romans);
+	roman1.animations.add('walk', [1, 2, 3, 2], 4, true);
+	roman1.animations.add('idle', [0], 4, false);
+	roman1.body.setSize(45.0, 100.0, 17.0, 0.0);
+
+	var roman2 = this.game.add.sprite(1408, 640, 'roman', 0, Romans);
+	roman2.animations.add('walk', [1, 2, 3, 2], 4, true);
+	roman2.animations.add('idle', [0], 4, false);
+	roman2.body.setSize(45.0, 100.0, 17.0, 0.0);
+
+	var roman3 = this.game.add.sprite(2048, 640, 'roman', 0, Romans);
+	roman3.animations.add('walk', [1, 2, 3, 2], 4, true);
+	roman3.animations.add('idle', [0], 4, false);
+	roman3.body.setSize(45.0, 100.0, 17.0, 0.0);
+
+	var russian = this.game.add.sprite(5760, 448, 'russian', 0, Romans);
+
+	var russian1 = this.game.add.sprite(6336, 640, 'russian', 0, Romans);
 
 	var Hazards = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
 
@@ -169,27 +1032,15 @@ function Scene2(aGame, aParent) {
 
 	var H005 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Hazards);
 
-	this.game.add.tileSprite(5248, 640, 64, 64, 'icespikepng', null, H005);
-
-	this.game.add.tileSprite(5376, 640, 64, 64, 'icespikepng', null, H005);
-
-	this.game.add.tileSprite(5504, 640, 64, 64, 'icespikepng', null, H005);
-
-	this.game.add.tileSprite(5632, 640, 64, 64, 'icespikepng', null, H005);
-
-	this.game.add.tileSprite(5760, 640, 64, 64, 'icespikepng', null, H005);
-
-	this.game.add.tileSprite(5888, 640, 64, 64, 'icespikepng', null, H005);
-
 	var H004 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Hazards);
 
-	this.game.add.tileSprite(4800, 576, 64, 64, 'singleicespike', null, H004);
+	this.game.add.tileSprite(6464, 320, 64, 64, 'icespikereverse', null, H004);
 
-	this.game.add.tileSprite(4864, 640, 64, 64, 'singleicespike', null, H004);
+	this.game.add.tileSprite(6528, 320, 64, 64, 'icespikereverse', null, H004);
 
-	this.game.add.tileSprite(4992, 768, 64, 64, 'singleicespike', null, H004);
+	this.game.add.tileSprite(6592, 320, 64, 64, 'icespikereverse', null, H004);
 
-	this.game.add.tileSprite(4928, 704, 64, 64, 'singleicespike', null, H004);
+	this.game.add.tileSprite(6656, 320, 64, 64, 'icespikereverse', null, H004);
 
 	var H003 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Hazards);
 
@@ -221,310 +1072,6 @@ function Scene2(aGame, aParent) {
 
 	this.game.add.tileSprite(1920, 704, 64, 64, 'spikepng', null, H000);
 
-	var GroundBase = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
-
-	var Ground4 = this.game.add.tileSprite(2048, -128, 64, 64, 'Ground', 4, GroundBase);
-	Ground4.body.immovable = true;
-	Ground4.body.allowRotation = false;
-	Ground4.body.allowGravity = false;
-
-	this.game.add.tileSprite(3456, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3520, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3584, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3648, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3712, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3776, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3776, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3840, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3520, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3584, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3648, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3712, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3776, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3776, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3840, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3904, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3904, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3968, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3968, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4032, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4096, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4032, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4096, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4160, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4160, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4224, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4224, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4288, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4352, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4288, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4608, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4480, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4352, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4416, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4544, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(3456, 704, 64, 64, 'snowwithgreytilesheet', 3, GroundBase);
-
-	this.game.add.tileSprite(5056, 768, 64, 64, 'snowwithgreytilesheet', 3, GroundBase);
-
-	this.game.add.tileSprite(4608, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4672, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4736, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4800, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4864, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4800, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5184, 1152, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5248, 1152, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5120, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5184, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5248, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5312, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5376, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5440, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5632, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5504, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5568, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5696, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4672, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4736, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4800, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4928, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5504, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5568, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5568, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5632, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5696, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5760, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5824, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5888, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5952, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6016, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6080, 1024, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7552, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7424, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7488, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7104, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4672, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4736, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4864, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5760, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5824, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5888, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5888, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(5952, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6016, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6720, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6784, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6848, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6912, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6976, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7488, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7040, 640, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7424, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7552, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(4608, 640, 64, 64, 'icewithgreytilesheet', 3, GroundBase);
-
-	this.game.add.tileSprite(5312, 1024, 64, 64, 'icewithgreytilesheet', 3, GroundBase);
-
-	this.game.add.tileSprite(6080, 768, 64, 64, 'snowwithgreytilesheet', 5, GroundBase);
-
-	this.game.add.tileSprite(6400, 704, 64, 64, 'snowwithgreytilesheet', 3, GroundBase);
-
-	this.game.add.tileSprite(6464, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6528, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6592, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6656, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6720, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6784, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6976, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6848, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6912, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7040, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7104, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7168, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7232, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7232, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7296, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7360, 704, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7616, 1024, 64, 64, 'snowwithgreytilesheet', 5, GroundBase);
-
-	this.game.add.tileSprite(6400, 768, 64, 64, 'snowwithgreytilesheet', 3, GroundBase);
-
-	this.game.add.tileSprite(6464, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6528, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6592, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6656, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6720, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6784, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6976, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6848, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(6912, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7040, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7104, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7168, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7232, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7232, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7296, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7360, 768, 64, 64, 'snowwithgreytilesheet', 4, GroundBase);
-
-	this.game.add.tileSprite(7616, 1088, 64, 64, 'snowwithgreytilesheet', 5, GroundBase);
-
-	var Arrows = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
-
-	var arrow = this.game.add.sprite(0, 896, 'arrow', null, Arrows);
-
-	var player = this.game.add.sprite(0, 0, 'urlsheetfixed', 0, prefabRoot_Scene1);
-	player.animations.add('swordWalk', [1, 2, 3, 2], 30, false);
-	player.animations.add('swordIdle', [0], 60, false);
-	player.animations.add('bowIdle', [6], 60, false);
-	player.animations.add('bowWalk', [7, 8, 9, 10], 30, false);
-	player.animations.add('swordAttack', [4, 5, 4], 30, false);
-	this.game.physics.arcade.enable(player);
-	player.body.setSize(45.0, 100.0, 17.0, 0.0);
-
-	var Romans = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
-
-	var roman = this.game.add.sprite(704, 0, 'roman', 0, Romans);
-	roman.animations.add('walk', [1, 2, 3, 2], 4, true);
-	roman.animations.add('idle', [0], 4, false);
-	roman.body.setSize(45.0, 100.0, 17.0, 0.0);
-
-	var roman1 = this.game.add.sprite(1216, 0, 'roman', 0, Romans);
-	roman1.animations.add('walk', [1, 2, 3, 2], 4, true);
-	roman1.animations.add('idle', [0], 4, false);
-	roman1.body.setSize(45.0, 100.0, 17.0, 0.0);
-
-	var roman2 = this.game.add.sprite(1408, 640, 'roman', 0, Romans);
-	roman2.animations.add('walk', [1, 2, 3, 2], 4, true);
-	roman2.animations.add('idle', [0], 4, false);
-	roman2.body.setSize(45.0, 100.0, 17.0, 0.0);
-
-	var roman3 = this.game.add.sprite(2048, 640, 'roman', 0, Romans);
-	roman3.animations.add('walk', [1, 2, 3, 2], 4, true);
-	roman3.animations.add('idle', [0], 4, false);
-	roman3.body.setSize(45.0, 100.0, 17.0, 0.0);
-
 	var Water = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
 
 	var W006 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Water);
@@ -537,13 +1084,13 @@ function Scene2(aGame, aParent) {
 
 	var W002 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Water);
 
-	this.game.add.tileSprite(6144, 768, 64, 64, 'watersprite1', null, W002);
+	this.game.add.tileSprite(4992, 512, 64, 64, 'watersprite2', null, W002);
 
-	this.game.add.tileSprite(6208, 768, 64, 64, 'watersprite1', null, W002);
+	this.game.add.tileSprite(5056, 512, 64, 64, 'watersprite2', null, W002);
 
-	this.game.add.tileSprite(6272, 768, 64, 64, 'watersprite1', null, W002);
+	this.game.add.tileSprite(5120, 512, 64, 64, 'watersprite2', null, W002);
 
-	this.game.add.tileSprite(6336, 768, 64, 64, 'watersprite1', null, W002);
+	this.game.add.tileSprite(5184, 512, 64, 64, 'watersprite2', null, W002);
 
 	var W001 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Water);
 
@@ -618,23 +1165,9 @@ function Scene2(aGame, aParent) {
 
 	var ST000 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
-	this.game.add.tileSprite(4608, 576, 64, 64, 'icewithgreytilesheet', 0, ST000);
+	this.game.add.tileSprite(5952, 640, 64, 64, 'snowwithgrey', 2, ST000);
 
-	this.game.add.tileSprite(4672, 576, 64, 64, 'icewithgreytilesheet', 1, ST000);
-
-	this.game.add.tileSprite(4736, 576, 64, 64, 'icewithgreytilesheet', 2, ST000);
-
-	this.game.add.tileSprite(5376, 1088, 64, 64, 'icewithgreytilesheet', 2, ST000);
-
-	this.game.add.tileSprite(5440, 1152, 64, 64, 'icewithgreytilesheet', 2, ST000);
-
-	this.game.add.tileSprite(5504, 1216, 64, 64, 'icewithgreytilesheet', 2, ST000);
-
-	this.game.add.tileSprite(5568, 1088, 64, 64, 'icewithgreytilesheet', 5, ST000);
-
-	this.game.add.tileSprite(5632, 1152, 64, 64, 'icewithgreytilesheet', 5, ST000);
-
-	this.game.add.tileSprite(5696, 1216, 64, 64, 'icewithgreytilesheet', 5, ST000);
+	this.game.add.tileSprite(6016, 704, 64, 64, 'snowwithgrey', 2, ST000);
 
 	var PL024 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 	PL024.position.setTo(67008, 5376);
@@ -1020,41 +1553,13 @@ function Scene2(aGame, aParent) {
 
 	var OB002 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
-	this.game.add.tileSprite(6720, 576, 64, 64, 'singleblockicegrey', null, OB002);
-
-	this.game.add.tileSprite(7104, 576, 64, 64, 'icewithgrey', 2, OB002);
-
-	this.game.add.tileSprite(7040, 576, 64, 64, 'icewithgrey', 0, OB002);
-
 	var OB001 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
-	this.game.add.tileSprite(5184, 640, 64, 64, 'crate', null, OB001);
+	this.game.add.tileSprite(4928, 512, 64, 64, 'snowwithgrey', 2, OB001);
 
-	this.game.add.tileSprite(5184, 576, 64, 64, 'crate', null, OB001);
+	this.game.add.tileSprite(4864, 512, 64, 64, 'snowwithgrey', 0, OB001);
 
-	this.game.add.tileSprite(5312, 640, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5312, 576, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5440, 640, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5440, 576, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5568, 640, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5568, 576, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5696, 640, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5696, 576, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5824, 640, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5824, 576, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5952, 640, 64, 64, 'crate', null, OB001);
-
-	this.game.add.tileSprite(5952, 576, 64, 64, 'crate', null, OB001);
+	this.game.add.tileSprite(5248, 512, 64, 64, 'snowwithgrey', 2, OB001);
 
 	var OB000 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
@@ -1076,65 +1581,77 @@ function Scene2(aGame, aParent) {
 
 	var GR005 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
-	this.game.add.tileSprite(6400, 640, 64, 64, 'snowwithgreytilesheet', 0, GR005);
+	this.game.add.tileSprite(6080, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(6528, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6144, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(6464, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6208, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7168, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6272, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7360, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6336, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7296, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6400, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7232, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6464, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7552, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6528, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7488, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6592, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(7424, 640, 64, 64, 'snowwithgrey', 1, GR005);
+	this.game.add.tileSprite(6656, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(6592, 640, 64, 64, 'icewithgrey', 1, GR005);
+	this.game.add.tileSprite(6720, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
-	this.game.add.tileSprite(6656, 640, 64, 64, 'icewithgrey', 1, GR005);
+	this.game.add.tileSprite(6784, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(6848, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(6912, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(6976, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(7040, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(7104, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(7168, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(7232, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(7296, 768, 64, 64, 'snowwithgrey', 1, GR005);
+
+	this.game.add.tileSprite(7360, 768, 64, 64, 'snowwithgrey', 1, GR005);
 
 	var GR004 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
-	this.game.add.tileSprite(6080, 704, 64, 64, 'snowwithgreytilesheet', 2, GR004);
+	this.game.add.tileSprite(4672, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5120, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(4736, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5056, 704, 64, 64, 'snowwithgreytilesheet', 0, GR004);
+	this.game.add.tileSprite(4800, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5184, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5312, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5248, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5376, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5312, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5440, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5376, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5504, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5440, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5568, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5504, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5632, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5568, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5696, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5632, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5760, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5696, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5824, 576, 64, 64, 'snowwithgrey', 1, GR004);
 
-	this.game.add.tileSprite(5760, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(5888, 576, 64, 64, 'snowwithgrey', 2, GR004);
 
-	this.game.add.tileSprite(5824, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
-
-	this.game.add.tileSprite(5888, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
-
-	this.game.add.tileSprite(5952, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
-
-	this.game.add.tileSprite(6016, 704, 64, 64, 'snowwithgreytilesheet', 1, GR004);
+	this.game.add.tileSprite(4608, 576, 64, 64, 'snowwithgreytilesheet', 0, GR004);
 
 	var GR003 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Plat);
 
@@ -1238,6 +1755,64 @@ function Scene2(aGame, aParent) {
 
 	this.game.add.tileSprite(2560, 768, 64, 64, 'Ground', 2, GR000);
 
+	var Ceil = this.game.add.physicsGroup(Phaser.Physics.ARCADE, prefabRoot_Scene1);
+
+	var CL001 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Ceil);
+
+	var CL000 = this.game.add.physicsGroup(Phaser.Physics.ARCADE, Ceil);
+
+	this.game.add.tileSprite(6144, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6016, 192, 64, 64, 'snowwithgreytilesheet', 6, CL000);
+
+	this.game.add.tileSprite(6080, 256, 64, 64, 'snowwithgreytilesheet', 6, CL000);
+
+	this.game.add.tileSprite(6208, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6272, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6336, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6400, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6464, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6528, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6592, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6720, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6784, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6848, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6912, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6976, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(7040, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(7104, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(7168, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(7232, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(7296, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(7360, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6656, 256, 64, 64, 'snowwithgreytilesheet', 7, CL000);
+
+	this.game.add.tileSprite(6016, -64, 64, 64, 'snowwithgreytilesheet', 3, CL000);
+
+	this.game.add.tileSprite(6016, 0, 64, 64, 'snowwithgreytilesheet', 3, CL000);
+
+	this.game.add.tileSprite(6016, 64, 64, 64, 'snowwithgreytilesheet', 3, CL000);
+
+	this.game.add.tileSprite(6016, 128, 64, 64, 'snowwithgreytilesheet', 3, CL000);
+
 	var endScreen = this.game.add.group(prefabRoot_Scene1);
 
 	var startScreen = this.game.add.group(prefabRoot_Scene1);
@@ -1246,55 +1821,55 @@ function Scene2(aGame, aParent) {
 
 	var MasterGroup = this.game.add.physicsGroup(Phaser.Physics.ARCADE, this);
 
-	this.game.add.tileSprite(7104, 1152, 64, 64, 'urlsnowsprite2', 7, MasterGroup);
+	this.game.add.tileSprite(6720, 1408, 64, 64, 'urlsnowsprite2', 7, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1152, 64, 64, 'urlsnowsprite2', 6, MasterGroup);
+	this.game.add.tileSprite(6656, 1408, 64, 64, 'urlsnowsprite2', 6, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1088, 64, 64, 'urlsnowsprite2', 5, MasterGroup);
+	this.game.add.tileSprite(6784, 1344, 64, 64, 'urlsnowsprite2', 5, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1088, 64, 64, 'urlsnowsprite2', 4, MasterGroup);
+	this.game.add.tileSprite(6720, 1344, 64, 64, 'urlsnowsprite2', 4, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1088, 64, 64, 'urlsnowsprite2', 3, MasterGroup);
+	this.game.add.tileSprite(6656, 1344, 64, 64, 'urlsnowsprite2', 3, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1024, 64, 64, 'urlsnowsprite2', 2, MasterGroup);
+	this.game.add.tileSprite(6784, 1280, 64, 64, 'urlsnowsprite2', 2, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1024, 64, 64, 'urlsnowsprite2', 1, MasterGroup);
+	this.game.add.tileSprite(6720, 1280, 64, 64, 'urlsnowsprite2', 1, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1024, 64, 64, 'urlsnowsprite2', 0, MasterGroup);
+	this.game.add.tileSprite(6656, 1280, 64, 64, 'urlsnowsprite2', 0, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1152, 64, 64, 'urlsnowsprite2', 8, MasterGroup);
+	this.game.add.tileSprite(6784, 1408, 64, 64, 'urlsnowsprite2', 8, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1344, 64, 64, 'urlsnowsprite', 8, MasterGroup);
+	this.game.add.tileSprite(6784, 1600, 64, 64, 'urlsnowsprite', 8, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1344, 64, 64, 'urlsnowsprite', 7, MasterGroup);
+	this.game.add.tileSprite(6720, 1600, 64, 64, 'urlsnowsprite', 7, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1344, 64, 64, 'urlsnowsprite', 6, MasterGroup);
+	this.game.add.tileSprite(6656, 1600, 64, 64, 'urlsnowsprite', 6, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1280, 64, 64, 'urlsnowsprite', 5, MasterGroup);
+	this.game.add.tileSprite(6784, 1536, 64, 64, 'urlsnowsprite', 5, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1280, 64, 64, 'urlsnowsprite', 4, MasterGroup);
+	this.game.add.tileSprite(6720, 1536, 64, 64, 'urlsnowsprite', 4, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1280, 64, 64, 'urlsnowsprite', 3, MasterGroup);
+	this.game.add.tileSprite(6656, 1536, 64, 64, 'urlsnowsprite', 3, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1216, 64, 64, 'urlsnowsprite', 2, MasterGroup);
+	this.game.add.tileSprite(6784, 1472, 64, 64, 'urlsnowsprite', 2, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1216, 64, 64, 'urlsnowsprite', 1, MasterGroup);
+	this.game.add.tileSprite(6720, 1472, 64, 64, 'urlsnowsprite', 1, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1216, 64, 64, 'urlsnowsprite', 0, MasterGroup);
+	this.game.add.tileSprite(6656, 1472, 64, 64, 'urlsnowsprite', 0, MasterGroup);
 
-	this.game.add.tileSprite(7360, 1472, 64, 64, 'firetilespritesheet', 3, MasterGroup);
+	this.game.add.tileSprite(6976, 1728, 64, 64, 'firetilespritesheet', 3, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1472, 64, 64, 'firetilespritesheet', 2, MasterGroup);
+	this.game.add.tileSprite(6912, 1728, 64, 64, 'firetilespritesheet', 2, MasterGroup);
 
-	this.game.add.tileSprite(7232, 1472, 64, 64, 'firetilespritesheet', 1, MasterGroup);
+	this.game.add.tileSprite(6848, 1728, 64, 64, 'firetilespritesheet', 1, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1472, 64, 64, 'firetilespritesheet', 0, MasterGroup);
+	this.game.add.tileSprite(6784, 1728, 64, 64, 'firetilespritesheet', 0, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1408, 64, 64, 'spritesheet', 2, MasterGroup);
+	this.game.add.tileSprite(6784, 1664, 64, 64, 'spritesheet', 2, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1408, 64, 64, 'spritesheet', 1, MasterGroup);
+	this.game.add.tileSprite(6720, 1664, 64, 64, 'spritesheet', 1, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1408, 64, 64, 'spritesheet', 0, MasterGroup);
+	this.game.add.tileSprite(6656, 1664, 64, 64, 'spritesheet', 0, MasterGroup);
 
 	this.game.add.tileSprite(1280, 1088, 64, 64, 'Ground', 8, MasterGroup);
 
@@ -1314,45 +1889,45 @@ function Scene2(aGame, aParent) {
 
 	this.game.add.tileSprite(1152, 960, 64, 64, 'Ground', 0, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1472, 64, 64, 'spikepng', null, MasterGroup);
+	this.game.add.tileSprite(6656, 1728, 64, 64, 'spikepng', null, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1536, 64, 64, 'watersprite2', null, MasterGroup);
+	this.game.add.tileSprite(6784, 1792, 64, 64, 'watersprite2', null, MasterGroup);
 
-	this.game.add.tileSprite(7168, 1600, 64, 64, 'watersprite1', null, MasterGroup);
+	this.game.add.tileSprite(6784, 1856, 64, 64, 'watersprite1', null, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1408, 64, 64, 'cavetile', null, MasterGroup);
+	this.game.add.tileSprite(6528, 1664, 64, 64, 'cavetile', null, MasterGroup);
 
-	this.game.add.tileSprite(7040, 1600, 64, 64, 'crate', null, MasterGroup);
+	this.game.add.tileSprite(6656, 1856, 64, 64, 'crate', null, MasterGroup);
 
 	this.game.add.tileSprite(1408, 1024, 64, 64, 'overhangsinglesprite', null, MasterGroup);
 
-	this.game.add.tileSprite(7232, 1152, 64, 64, 'singlesnow', null, MasterGroup);
+	this.game.add.tileSprite(6848, 1408, 64, 64, 'singlesnow', null, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1600, 64, 64, 'singleicespike', null, MasterGroup);
+	this.game.add.tileSprite(6720, 1856, 64, 64, 'singleicespike', null, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1152, 64, 64, 'singleblocksnow', null, MasterGroup);
+	this.game.add.tileSprite(6912, 1408, 64, 64, 'singleblocksnow', null, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1344, 64, 64, 'singleblockice', null, MasterGroup);
+	this.game.add.tileSprite(6912, 1600, 64, 64, 'singleblockice', null, MasterGroup);
 
 	this.game.add.tileSprite(1408, 1088, 64, 64, 'oneblocksprite', null, MasterGroup);
 
-	this.game.add.tileSprite(7104, 1536, 64, 64, 'icespikereverse', null, MasterGroup);
+	this.game.add.tileSprite(6720, 1792, 64, 64, 'icespikereverse', null, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1280, 64, 64, 'singleblockiceoverhang', null, MasterGroup);
+	this.game.add.tileSprite(6912, 1536, 64, 64, 'singleblockiceoverhang', null, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1088, 64, 64, 'singleblocksnowoverhang', null, MasterGroup);
+	this.game.add.tileSprite(6912, 1344, 64, 64, 'singleblocksnowoverhang', null, MasterGroup);
 
-	this.game.add.tileSprite(7360, 1024, 64, 64, 'snowoverhang', 2, MasterGroup);
+	this.game.add.tileSprite(6976, 1280, 64, 64, 'snowoverhang', 2, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1024, 64, 64, 'snowoverhang', 1, MasterGroup);
+	this.game.add.tileSprite(6912, 1280, 64, 64, 'snowoverhang', 1, MasterGroup);
 
-	this.game.add.tileSprite(7232, 1024, 64, 64, 'snowoverhang', 0, MasterGroup);
+	this.game.add.tileSprite(6848, 1280, 64, 64, 'snowoverhang', 0, MasterGroup);
 
-	this.game.add.tileSprite(7360, 1216, 64, 64, 'iceoverhang', 2, MasterGroup);
+	this.game.add.tileSprite(6976, 1472, 64, 64, 'iceoverhang', 2, MasterGroup);
 
-	this.game.add.tileSprite(7296, 1216, 64, 64, 'iceoverhang', 1, MasterGroup);
+	this.game.add.tileSprite(6912, 1472, 64, 64, 'iceoverhang', 1, MasterGroup);
 
-	this.game.add.tileSprite(7232, 1216, 64, 64, 'iceoverhang', 0, MasterGroup);
+	this.game.add.tileSprite(6848, 1472, 64, 64, 'iceoverhang', 0, MasterGroup);
 
 	this.game.add.tileSprite(1472, 960, 64, 64, 'overhangsprite', 2, MasterGroup);
 
@@ -1360,69 +1935,72 @@ function Scene2(aGame, aParent) {
 
 	this.game.add.tileSprite(1344, 960, 64, 64, 'overhangsprite', 0, MasterGroup);
 
-	this.game.add.tileSprite(6784, 1024, 64, 64, 'snowwithgrey', 2, MasterGroup);
+	this.game.add.tileSprite(6400, 1280, 64, 64, 'snowwithgrey', 2, MasterGroup);
 
-	this.game.add.tileSprite(6720, 1024, 64, 64, 'snowwithgrey', 1, MasterGroup);
+	this.game.add.tileSprite(6336, 1280, 64, 64, 'snowwithgrey', 1, MasterGroup);
 
-	this.game.add.tileSprite(6656, 1024, 64, 64, 'snowwithgrey', 0, MasterGroup);
+	this.game.add.tileSprite(6272, 1280, 64, 64, 'snowwithgrey', 0, MasterGroup);
 
-	this.game.add.tileSprite(6784, 1216, 64, 64, 'icewithgrey', 2, MasterGroup);
+	this.game.add.tileSprite(6400, 1472, 64, 64, 'icewithgrey', 2, MasterGroup);
 
-	this.game.add.tileSprite(6720, 1216, 64, 64, 'icewithgrey', 1, MasterGroup);
+	this.game.add.tileSprite(6336, 1472, 64, 64, 'icewithgrey', 1, MasterGroup);
 
-	this.game.add.tileSprite(6656, 1216, 64, 64, 'icewithgrey', 0, MasterGroup);
+	this.game.add.tileSprite(6272, 1472, 64, 64, 'icewithgrey', 0, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1344, 64, 64, 'icewithgreytilesheet', 8, MasterGroup);
+	this.game.add.tileSprite(6592, 1600, 64, 64, 'icewithgreytilesheet', 8, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1344, 64, 64, 'icewithgreytilesheet', 7, MasterGroup);
+	this.game.add.tileSprite(6528, 1600, 64, 64, 'icewithgreytilesheet', 7, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1344, 64, 64, 'icewithgreytilesheet', 6, MasterGroup);
+	this.game.add.tileSprite(6464, 1600, 64, 64, 'icewithgreytilesheet', 6, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1280, 64, 64, 'icewithgreytilesheet', 5, MasterGroup);
+	this.game.add.tileSprite(6592, 1536, 64, 64, 'icewithgreytilesheet', 5, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1280, 64, 64, 'icewithgreytilesheet', 4, MasterGroup);
+	this.game.add.tileSprite(6528, 1536, 64, 64, 'icewithgreytilesheet', 4, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1280, 64, 64, 'icewithgreytilesheet', 3, MasterGroup);
+	this.game.add.tileSprite(6464, 1536, 64, 64, 'icewithgreytilesheet', 3, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1216, 64, 64, 'icewithgreytilesheet', 2, MasterGroup);
+	this.game.add.tileSprite(6592, 1472, 64, 64, 'icewithgreytilesheet', 2, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1216, 64, 64, 'icewithgreytilesheet', 1, MasterGroup);
+	this.game.add.tileSprite(6528, 1472, 64, 64, 'icewithgreytilesheet', 1, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1216, 64, 64, 'icewithgreytilesheet', 0, MasterGroup);
+	this.game.add.tileSprite(6464, 1472, 64, 64, 'icewithgreytilesheet', 0, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1152, 64, 64, 'snowwithgreytilesheet', 8, MasterGroup);
+	this.game.add.tileSprite(6592, 1408, 64, 64, 'snowwithgreytilesheet', 8, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1152, 64, 64, 'snowwithgreytilesheet', 7, MasterGroup);
+	this.game.add.tileSprite(6528, 1408, 64, 64, 'snowwithgreytilesheet', 7, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1152, 64, 64, 'snowwithgreytilesheet', 6, MasterGroup);
+	this.game.add.tileSprite(6464, 1408, 64, 64, 'snowwithgreytilesheet', 6, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1088, 64, 64, 'snowwithgreytilesheet', 5, MasterGroup);
+	this.game.add.tileSprite(6592, 1344, 64, 64, 'snowwithgreytilesheet', 5, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1088, 64, 64, 'snowwithgreytilesheet', 4, MasterGroup);
+	this.game.add.tileSprite(6528, 1344, 64, 64, 'snowwithgreytilesheet', 4, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1088, 64, 64, 'snowwithgreytilesheet', 3, MasterGroup);
+	this.game.add.tileSprite(6464, 1344, 64, 64, 'snowwithgreytilesheet', 3, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1024, 64, 64, 'snowwithgreytilesheet', 2, MasterGroup);
+	this.game.add.tileSprite(6592, 1280, 64, 64, 'snowwithgreytilesheet', 2, MasterGroup);
 
-	this.game.add.tileSprite(6912, 1024, 64, 64, 'snowwithgreytilesheet', 1, MasterGroup);
+	this.game.add.tileSprite(6528, 1280, 64, 64, 'snowwithgreytilesheet', 1, MasterGroup);
 
-	this.game.add.tileSprite(6848, 1024, 64, 64, 'snowwithgreytilesheet', 0, MasterGroup);
+	this.game.add.tileSprite(6464, 1280, 64, 64, 'snowwithgreytilesheet', 0, MasterGroup);
 
-	this.game.add.tileSprite(6976, 1472, 64, 64, 'icespikepngright', null, MasterGroup);
-
-	this.game.add.tileSprite(6912, 1536, 64, 64, 'icespikepngleft', null, MasterGroup);
-
-	this.game.add.tileSprite(6976, 1536, 64, 64, 'icespikepngdown', null, MasterGroup);
-
-	this.game.add.tileSprite(6720, 1088, 64, 64, 'singleblocksnowgrey', null, MasterGroup);
-
-	this.game.add.tileSprite(6720, 1280, 64, 64, 'singleblockicegrey', null, MasterGroup);
-
-	this.game.add.tileSprite(6912, 1472, 64, 64, 'icespikepng', null, MasterGroup);
+	this.game.add.tileSprite(6720, 1728, 64, 64, 'icespikepng', null, MasterGroup);
 
 	 // public fields
 
 	this.fCollisionLayer = CollisionLayer;
+	this.fCaveWalls = CaveWalls;
+	this.fGroundBase = GroundBase;
+	this.fCeilBase = CeilBase;
+	this.fArrows = Arrows;
+	this.fArrow = arrow;
+	this.fPlayer = player;
+	this.fRomans = Romans;
+	this.fRoman = roman;
+	this.fRoman1 = roman1;
+	this.fRoman2 = roman2;
+	this.fRoman3 = roman3;
+	this.fRussian = russian;
+	this.fRussian1 = russian1;
 	this.fHazards = Hazards;
 	this.fFIREWALL = FIREWALL;
 	this.fH010 = H010;
@@ -1442,15 +2020,6 @@ function Scene2(aGame, aParent) {
 	this.fH002 = H002;
 	this.fH001 = H001;
 	this.fH000 = H000;
-	this.fGroundBase = GroundBase;
-	this.fArrows = Arrows;
-	this.fArrow = arrow;
-	this.fPlayer = player;
-	this.fRomans = Romans;
-	this.fRoman = roman;
-	this.fRoman1 = roman1;
-	this.fRoman2 = roman2;
-	this.fRoman3 = roman3;
 	this.fWater = Water;
 	this.fW006 = W006;
 	this.fW005 = W005;
@@ -1536,6 +2105,9 @@ function Scene2(aGame, aParent) {
 	this.fGR002 = GR002;
 	this.fGR001 = GR001;
 	this.fGR000 = GR000;
+	this.fCeil = Ceil;
+	this.fCL001 = CL001;
+	this.fCL000 = CL000;
 	this.fEndScreen = endScreen;
 	this.fStartScreen = startScreen;
 	this.fTheDress = theDress;

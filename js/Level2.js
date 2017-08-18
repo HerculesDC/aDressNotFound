@@ -461,9 +461,29 @@ Level2.prototype.create = function() {
 	   this.scene.fW006.setAll("body.allowGravity", false);
 	   this.scene.fW006.setAll("body.velocity.x", scrollSpeed);
 	   
+	   this.scene.fCaveWalls.setAll("body.immovable", true);
+	   this.scene.fCaveWalls.setAll("body.allowGravity", false);
+	   this.scene.fCaveWalls.setAll("body.velocity.x", scrollSpeed);
+	   
 	   this.scene.fGroundBase.setAll("body.immovable", true);
 	   this.scene.fGroundBase.setAll("body.allowGravity", false);
 	   this.scene.fGroundBase.setAll("body.velocity.x", scrollSpeed);
+	   
+	   this.scene.fCeilBase.setAll("body.immovable", true);
+	   this.scene.fCeilBase.setAll("body.allowGravity", false);
+	   this.scene.fCeilBase.setAll("body.velocity.x", newScroll);
+	   
+	   this.scene.fCL000.setAll("body.immovable", true);
+	   this.scene.fCL000.setAll("body.allowGravity", false);
+	   this.scene.fCL000.setAll("body.velocity.x", scrollSpeed);
+	   
+	   this.scene.fCL001.setAll("body.immovable", true);
+	   this.scene.fCL001.setAll("body.allowGravity", false);
+	   this.scene.fCL001.setAll("body.velocity.x", scrollSpeed);
+
+	   this.scene.fCeil.setAll("body.immovable", true);
+	   this.scene.fCeil.setAll("body.allowGravity", false);
+	   this.scene.fCeil.setAll("body.velocity.x", newScroll);
 	   
 	   this.scene.fTheDress.setAll("body.immovable", true);
 	   this.scene.fTheDress.setAll("body.allowGravity", false);
@@ -472,6 +492,7 @@ Level2.prototype.create = function() {
 	   	   
 	   this.scene.fEndScreen.setAll("renderable", false);
 	   
+	  
 	   this.cursors = this.input.keyboard.createCursorKeys();
 	   
 	   BGMusic = this.add.audio('BGMusic');
@@ -485,6 +506,7 @@ Level2.prototype.init = function () {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     this.physics.startSystem(Phaser.Physics.ARCADE);
     this.physics.arcade.gravity.y = 1500;
+    
 };
 
 //collision handlers
@@ -696,6 +718,8 @@ Level2.prototype.scrollUpdate = function(speed) {
 		this.scene.fW006.setAll("body.velocity.x", speed);
 		
 		this.scene.fGroundBase.setAll("body.velocity.x", speed);
+		
+		this.scene.fCaveWalls.setAll("body.velocity.x", speed);
 		
 		this.scene.fTheDress.setAll("body.velocity.x", speed);		
 };
@@ -976,3 +1000,4 @@ Level2.prototype.update = function() {
     this.physics.arcade.overlap(this.scene.fPlayer, this.scene.fTheDress, this.levelEndColl, null, this);
 	}   
 };
+    
